@@ -1,0 +1,15 @@
+<html>
+{% load static%}
+    <head>
+    </head>
+    <body>
+        {%for t in y%}
+        {{t}}
+        {%endfor%}
+        {{request.session.get_session_cookie_age}}<br>
+        {{request.session.get_session_expiry_date}}<br>
+        {{request.session.get_session_expiry_age}}<br>
+        {{request.session.get_session_expire_at_browser_close}}<br>
+        {{p}}
+    </body>
+</html>

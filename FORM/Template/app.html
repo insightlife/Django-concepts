@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div align="center">
+    <h1>Fill out form</h1>
+    <div class="container">
+    <form method="post" action="kit" class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><label for="id_subject">SUBJECT</label>
+            <input id="id_subject" type="password"></p>
+        <input type="submit">
+    </form>
+    </div>
+    </div>
+</body>
+</html>

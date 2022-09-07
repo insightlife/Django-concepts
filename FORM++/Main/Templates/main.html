@@ -1,0 +1,18 @@
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'basic.css'%}">
+        <link rel="stylesheet" href="{%static 'bootstrap.css' %}">
+    </head>
+    <body>
+        <div align="center">
+            <h1 class="h1">Welcome</h1>
+            <form class="form-group" action="response" method="GET">
+            {{form.as_p}}
+            <input type="submit">
+            </form>
+            {%block content%}
+            {%endblock%}
+         </div>
+    </body>
+</html>

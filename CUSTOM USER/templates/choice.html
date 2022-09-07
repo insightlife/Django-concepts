@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head></head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form method="POST" action="choice" class="form-group">
+                    {% csrf_token %}
+                    <h3 class="align form-heading">Creating order</h3>
+                    <label class="space"><div class="textsize">Date</div></label>
+                    <input type="date" name="concern" required class="form-control space">
+                    <button type="submit" name="submit" value="Submit" class="btn btn-dark space-button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

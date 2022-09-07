@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<body>
+    <h1 align="center">welcome to dtl</h1>
+    <div align="center">
+        {{ student }}<br>
+        {{ student.stu1 }}<br>
+        {{ student.stu2 }}<br>
+        {{ student.stu3 }}<br>
+        {{ student.stu1.name }}<br>
+        {{ student.stu1.rollno }}<br>
+        {{ student.stu2.name }}<br>
+        {{ student.stu2.rollno }}<br>
+        {{ student.stu3.name }}<br>
+        {{ student.stu3.rollno }}<br>
+        {% for key,index in student.items %}
+            {{ key }}<br>
+            {{ index }}<br>
+            {% for i,j in index.items %}
+                {{ i }}<br>
+                {{ j }}<br>
+                {% endfor %}
+        {% endfor %}
+        {% if employee %}
+            {{ employee }}
+        {% endif %}
+        {{ info }}<br>
+        {{ info.id1 }}<br>
+        {{ info.id2 }}<br>
+        {{ info.id2.0}}<br>
+        {{ info.id1.0}}<br>
+        {{ employee|title }}
+        {{ employee|upper }}
+        {{ employee|length }}
+    </div>
+</body>
+</html>
